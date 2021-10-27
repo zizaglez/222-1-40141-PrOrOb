@@ -1,3 +1,5 @@
+package classes;
+
 public class Human{
 
         //Attributes / Properties. en java los atributos y los metodos hay que definir el tipo
@@ -19,3 +21,4 @@ public class Human{
         }
         
     }
+    
