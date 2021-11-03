@@ -1,6 +1,6 @@
 class Celular:
 
-    color = "negro"
+    color = "negro"#estos son mis atributos
     marca = "Iphone"
     modelo = 7
 
