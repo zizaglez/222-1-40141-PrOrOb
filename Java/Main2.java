@@ -1,17 +1,33 @@
-import Classes.Course;
+package Classes;
 
-public class Main2{
+public class Course{
+    public String materia;
+    public String grupo;
+    public String profesor;
+    public String siguiente_materia;
 
-    public static void main(String[] args){
+    //This is the constructor in java
+    public Course(String materia, String profesor, String grupo, String siguiente_materia){
+        super();
+        this.materia = materia;
+        this.grupo = grupo;
+        this.profesor = profesor;
+        this.siguiente_materia = siguiente_materia;
+    }
 
-        //System.out.println("Learning Object Oriented Programming with Java");
-        Course course_in_progress = new Course("POO ","Luis Guerra a las ", "7 pm ", " somos el grupo 204");
-        Course my_next_course = new Course("Programación multimedia", "Sinai Bucio ", "8" ," grupo 256");
+    public String nombre_profesor(String materia, String profesor, String grupo){
+        return materia + "la imparte " + profesor + grupo;
+    }
 
-        System.out.println(course_in_progress.nombre_profesor(course_in_progress.materia, course_in_progress.profesor ,course_in_progress.grupo));
-        System.out.println("Mi siguiente materia es "+ my_next_course.materia + " la imparte " + my_next_course.profesor +" los jueves a las " + my_next_course.grupo);
+    public String siguiente_asignacion(String materia, String siguiente_materia){
+        return siguiente_materia + materia;
+    }
 
-        Course.hola_amigos();
-        course_in_progress.course_class();
+    public static void hola_amigos() {
+        System.out.println("Hola profesor y compañeros");
+    }
+
+    public void course_class(){
+        System.out.println("En mi clase de POO somos 7 en el grupo y en la materia que viene Dios dira");
     }
 }
