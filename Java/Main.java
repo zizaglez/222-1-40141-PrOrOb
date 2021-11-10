@@ -1,4 +1,4 @@
-import classes.course;
+import classes.Course;
 
 public class Main {
 
