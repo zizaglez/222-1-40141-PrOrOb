@@ -1,0 +1,12 @@
+Python + Java
+
+class: Course
+-Contructor
+-3 attributes + 3 properties
+-3 Methods NO parameters
+-3 Methods WITH parameters (2)
+
+2. Create a class with same structure but with my own select name # Class: sistemas
+
+
+
