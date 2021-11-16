@@ -1,39 +1,47 @@
 package Classes;
 
+
 public class Course {
     
     public int id;
     public String name;
-    public String description;
+    public double score;
     public double price;
-    public int class_room;
+    public String materia;
     public String professor;
+    public double descuento;
 
-    public Course(int id, String name, String description, double price, int class_room, String professor){
+    public Course(int id, String name, double score, double price, String materia, String professor, double descuento){
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.score = score;
         this.price = price;
-        this.class_room = class_room;
+        this.materia = materia;
         this.professor = professor;
     }
 
     public String welcome_course(){
-        return "Welcome to this course";
+        return "Welcome to POO";
+    }
+
+    public String ratings(){
+        return "You final score is: ";
     }
 
     public void goodbye_course(){
-        System.out.println("Good bye, please comeback soon");
+        System.out.println("Thank you for taking POO");
     }
 
-    public double get_price_per_user(int users, double discount){
-        double result = this.price * users;
-        result = result - discount;
+    public double get_price_per_user(double price, double descuento){
+        double result = this.price - descuento;
         return result; 
     }
 
-    public String new_teacher(String first_name, String last_name){
-        String full_name = first_name + " " + last_name;
-        return "This is the new teacher " + full_name;
+    public String new_teacher(String professor, double price){
+        return "This is the new teacher " + professor + price;
+    }
+    public String new_semester(String profesor, String name){
+        return "This is my new materia: " + name + profesor;
+
     }
 }
