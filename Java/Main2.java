@@ -1,17 +1,19 @@
-import Classes.Course;
+import Classes.Mycar;
 
-public class Main2{
+public class Main2 {
 
-    public static void main(String[] args){
+    public static void Mycar(String[] args){
 
-        //System.out.println("Learning Object Oriented Programming with Java");
-        Course course_in_progress = new Course("POO ","Luis Guerra a las ", "7 pm ", " somos el grupo 204");
-        Course my_next_course = new Course("Programación multimedia", "Sinai Bucio ", "8" ," grupo 256");
+         //System.out.println("Learning Object Oriented Programming with Java");
+         Mycar Mi_carro = new Mycar("Red", "CL", 35000, 5000, 150000, "Hilux");
+         System.out.println(Mi_carro.modelo);
+         System.out.println(Mi_carro.color);
+         System.out.println(Mi_carro.my_current_car());
+         System.out.println(Mi_carro.my_sold_car());
+         Mi_carro.my_new_car("Toyota");
+         System.out.println(Mi_carro.new_car_price(15000));
+         System.out.println(Mi_carro.new_car_with_discount(14500));
 
-        System.out.println(course_in_progress.nombre_profesor(course_in_progress.materia, course_in_progress.profesor ,course_in_progress.grupo));
-        System.out.println("Mi siguiente materia es "+ my_next_course.materia + " la imparte " + my_next_course.profesor +" los jueves a las " + my_next_course.grupo);
-
-        Course.hola_amigos();
-        course_in_progress.course_class();
     }
+    
 }

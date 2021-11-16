@@ -24,7 +24,7 @@ class Course:
 
 ####out of the class
 
-new_course = Course(1, 1000, "POO", "Cesar g", 5, 10);#aqui estamos instanciando un objecto de la clase curso el cual lleva un constructor
+new_course = Course(1, 1000, "POO", "Cesar g", 5, 10)#aqui estamos instanciando un objecto de la clase curso el cual lleva un constructor
 print(new_course.welcome())
 print(new_course.goodbye())
 print(new_course.new_profesor("Omar"))
