@@ -32,9 +32,9 @@ public class Course {
         System.out.println("Thank you for taking POO");
     }
 
-    public double get_price_per_user(double price, double descuento){
+    public double get_price_per_materia(double price, double descuento){
         double result = this.price - descuento;
-        return result; 
+        return result;
     }
 
     public String new_teacher(String professor, double price){

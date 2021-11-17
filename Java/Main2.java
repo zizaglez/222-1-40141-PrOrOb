@@ -2,7 +2,7 @@ import Classes.Mycar;
 
 public class Main2 {
 
-    public static void Mycar(String[] args){
+    public static void Main2(String[] args){
 
          //System.out.println("Learning Object Oriented Programming with Java");
          Mycar Mi_carro = new Mycar("Gris", " 2005 ", 40000, 5000, 150000, "Hilux");

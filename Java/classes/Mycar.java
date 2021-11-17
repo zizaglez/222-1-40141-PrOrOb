@@ -17,8 +17,8 @@ public class Mycar {
         this.new_ride = new_ride;
     }
 
-    public void my_current_car(){
-        System.out.println("My Golf");
+    public String my_current_car(){
+        return "My Golf";
     }
     public void mycar_4_sale(){
         System.out.println("Car for sale");
