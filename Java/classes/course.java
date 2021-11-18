@@ -1,6 +1,5 @@
 package Classes;
 
-
 public class Course {
     
     public int id;
@@ -28,11 +27,11 @@ public class Course {
         return "You final score is: ";
     }
 
-    public void goodbye_course(){
-        System.out.println("Thank you for taking POO");
+    public String goodbye_course(){
+        return "Thank you for taking POO";
     }
 
-    public double get_price_per_materia(double price, double descuento){
+    public double get_price_per_user(double price, double descuento){
         double result = this.price - descuento;
         return result;
     }
