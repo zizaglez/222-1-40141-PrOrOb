@@ -1,16 +1,17 @@
 class Computer:
 
-    def __init__(self, id, computer_name, sistema_operativo, color, numero_serie, ram, tarjeta_video, monitor, teclado, mouse):
-        self.id = id
-        self.sistema_operativo = sistema_operativo
-        self.color = color
-        self.numero_serie = numero_serie
-        self.computer_name = computer_name
-        self.ram = ram
-        self.tarjeta_video = tarjeta_video
-        self.monitor = monitor
+    def __init__(self, teclado):
         self.teclado = teclado
-        self.mouse = mouse
+        #id, computer_name, sistema_operativo, color, numero_serie, ram, tarjeta_video, monitor, mouse
+        #self.id = id
+        #self.sistema_operativo = sistema_operativo
+        #self.color = color
+        #self.numero_serie = numero_serie
+        #self.computer_name = computer_name
+        #self.ram = ram
+        #self.tarjeta_video = tarjeta_video
+        #self.monitor = monitor
+        #self.mouse = mouse
 
     def id_number(self, id):
         return "ID Computadora: " + str(id)
@@ -32,12 +33,13 @@ class Computer:
         return ("Procesa -> informacion\n")
 
 
-current_computer = Computer(1, "Xtreme PC ", "Windows 10 Pro\n", "negro ", "00331-10000-00001-AA510", "16\n", "AMD Radeon R7 Graphics", "Dell\n", "Logitech\n", "Tecknet Inalambrico")#aqui estamos instanciando un objecto de la clase my_car el cual lleva un constructor
-print(current_computer.id_number(current_computer.id))
-print(current_computer.personal_computer(current_computer.computer_name, current_computer.color))
-print(current_computer.SO(current_computer.sistema_operativo, current_computer. numero_serie))
-print(current_computer.specs_internos(current_computer.ram, current_computer. tarjeta_video))
-print(current_computer.perifericos(current_computer.monitor, current_computer. teclado, current_computer.mouse))
+current_computer = Computer("Logitech\n")#aqui estamos instanciando un objecto de la clase my_car el cual lleva un constructor
+#, 1, "Xtreme PC ", "Windows 10 Pro\n", "negro ", "00331-10000-00001-AA510", "16\n", "AMD Radeon R7 Graphics", "Dell\n", "Tecknet Inalambrico"
+print(current_computer.id_number(1))
+print(current_computer.personal_computer("Xtreme PC ", "negro "))
+print(current_computer.SO("Windows 10 Pro\n", "00331-10000-00001-AA510"))
+print(current_computer.specs_internos("16\n", "AMD Radeon R7 Graphics"))
+print(current_computer.perifericos("Dell\n", current_computer.teclado,  "Tecknet Inalambrico"))
 print(current_computer.metodo())
 
 
@@ -123,17 +125,17 @@ class Monitor:
     def monitor_id(self, id_pieza):
         return "ID monitor: " + str(id_pieza)
 
-current_monitor = Monitor("Dell\n", "P2418HZM\n", "Plateado", "B0787GT54Y\n", "12.25 libras\n", "21.65 x 7.09 x 19.71 pulgadas", 4)
+current_monitor = Monitor("Dell\n", "P2418HZM\n", "Plateado", "B0787GT54Y\n", "12.25 libras\n", "21.65 x 7.09 x 19.71 pulgadas\n", 4)
 print(current_monitor.monitor_general_info(current_monitor.marca, current_monitor.modelo, current_monitor.color))
 print(current_monitor.monitor_specs(current_monitor.numero_serie, current_monitor.peso_producto, current_monitor.dimenciones_producto))
 print(current_monitor.monitor_id(current_monitor.id_pieza))
 
 
-class Teclado:
+class Teclado(Computer):
 
-    def __init__(self, id, marca, color, modelo, tipo):
+    def __init__(self, teclado, id, color, modelo, tipo):
+        super().__init__(teclado)
         self.id = id
-        self.marca = marca
         self.color = color
         self.modelo = modelo
         self.tipo = tipo
@@ -144,14 +146,14 @@ class Teclado:
     def keyboard_specs(self, modelo, tipo):
         return "Modelo: "+modelo + "Tipo: "+tipo
 
-    def keyboard_general_info(self, marca, color):
-        return "Marca: "+marca+"Color: "+color
+    def keyboard_general_info(self, color):
+        return "Teclado: "+current_keyboard.teclado + "Color: "+ color 
 
     def metodo(self):
         return "Teclado -> Escribe"
 
-current_keyboard = Teclado (5, "Logitech\n", "Negro\n", "K120\n", "Alambrico")
+current_keyboard = Teclado ("Logitech\n", 5, "Negro\n", "K120\n", "Alambrico")
 print(current_keyboard.keyboard(current_keyboard.id))
 print(current_keyboard.keyboard_specs(current_keyboard.modelo, current_keyboard.tipo))
-print(current_keyboard.keyboard_general_info(current_keyboard.marca, current_keyboard.color))
+print(current_keyboard.keyboard_general_info(current_keyboard.color))
 print(current_keyboard.metodo())
